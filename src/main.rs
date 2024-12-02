@@ -1,4 +1,4 @@
-use std::io::stdout;
+
 
 fn main() {
     println!("Hello, world!");
@@ -27,9 +27,13 @@ fn tipe_data_integer(){
     println!("unsigned {unsigned_1}");
 }
 // contoh scalar tipe float
-/*Tipe data float dapat menerima semua angka decimal
+/*Tipe data float dapat menerima semua angka decimal 
+decimal di dalam pemogramman menggunakan titik dan bukan koma
  */
 #[test]
 fn tipe_data_float(){
+    let float_1 : f32 = 1.4;
+    let float_2 : f32 = 2941.3221;
 
+    println!("{float_1}, {float_2}");
 }
