@@ -1,7 +1,7 @@
 
 
 fn main() {
-    println!("Hello, world!");
+    perhitungan();
 }
 
 /*Scalar Type
@@ -54,4 +54,41 @@ fn tipe_data_float(){
     let float_2 : f32 = 2941.3221;
 
     println!("{float_1}, {float_2}");
+}
+
+/*Contoh penggunaan perhitungan pada pemograman rust
+sebenarnya sama aja kaya bahasa pemograman lain*/
+const NUMBER1 : i32 = 11;
+const NUMBER2 : i32 = 5;
+fn perhitungan(){
+    // pernjumlahan
+    let penjumlahan = NUMBER1 + NUMBER2;
+    println!("Penjumlahan dari {NUMBER1} + {NUMBER2} = {penjumlahan}");
+
+    // pengurangan
+    let pengurangan = NUMBER1 - NUMBER2;
+    println!("Pengurangan dari 12 - 5 = {pengurangan}");
+
+    // perkalian
+    let perkalian = NUMBER1 * NUMBER2;
+    println!("Perkalian dari 12 * 5 = {perkalian}");
+
+    // pembagian 
+    let pembagian = NUMBER1 / NUMBER2;
+    println!("pembagian dari 12 / 5 = {pembagian}");
+
+    // modulus
+    let modulus = NUMBER1 % NUMBER2;
+    println!("Modulus dari 12 % 5 = {modulus}");
+}
+
+// boolean hanya memiliki 2 fungsi yaitu true dan false
+#[test]
+fn nilai_boolean(){
+    let x = true;
+
+    let y : bool = false;
+
+    println!("{x}");
+    println!("{y}");
 }
