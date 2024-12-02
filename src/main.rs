@@ -1,7 +1,8 @@
 
 
+
 fn main() {
-    perhitungan();
+
 }
 
 /*Scalar Type
@@ -58,29 +59,29 @@ fn tipe_data_float(){
 
 /*Contoh penggunaan perhitungan pada pemograman rust
 sebenarnya sama aja kaya bahasa pemograman lain*/
-const NUMBER1 : i32 = 11;
-const NUMBER2 : i32 = 5;
-fn perhitungan(){
-    // pernjumlahan
-    let penjumlahan = NUMBER1 + NUMBER2;
-    println!("Penjumlahan dari {NUMBER1} + {NUMBER2} = {penjumlahan}");
+// const NUMBER1 : i32 = 11;
+// const NUMBER2 : i32 = 5;
+// fn perhitungan(){
+//     // pernjumlahan
+//     let penjumlahan = NUMBER1 + NUMBER2;
+//     println!("Penjumlahan dari {NUMBER1} + {NUMBER2} = {penjumlahan}");
 
-    // pengurangan
-    let pengurangan = NUMBER1 - NUMBER2;
-    println!("Pengurangan dari 12 - 5 = {pengurangan}");
+//     // pengurangan
+//     let pengurangan = NUMBER1 - NUMBER2;
+//     println!("Pengurangan dari 12 - 5 = {pengurangan}");
 
-    // perkalian
-    let perkalian = NUMBER1 * NUMBER2;
-    println!("Perkalian dari 12 * 5 = {perkalian}");
+//     // perkalian
+//     let perkalian = NUMBER1 * NUMBER2;
+//     println!("Perkalian dari 12 * 5 = {perkalian}");
 
-    // pembagian 
-    let pembagian = NUMBER1 / NUMBER2;
-    println!("pembagian dari 12 / 5 = {pembagian}");
+//     // pembagian 
+//     let pembagian = NUMBER1 / NUMBER2;
+//     println!("pembagian dari 12 / 5 = {pembagian}");
 
-    // modulus
-    let modulus = NUMBER1 % NUMBER2;
-    println!("Modulus dari 12 % 5 = {modulus}");
-}
+//     // modulus
+//     let modulus = NUMBER1 % NUMBER2;
+//     println!("Modulus dari 12 % 5 = {modulus}");
+// }
 
 // boolean hanya memiliki 2 fungsi yaitu true dan false
 #[test]
@@ -91,4 +92,40 @@ fn nilai_boolean(){
 
     println!("{x}");
     println!("{y}");
+}
+
+/*tuple merupakan himpunan dari beberapa type scalar, saat sudah dibuat
+maka tidak bisa menambahkan type ke dalam himpunan atau pun mengurangi himpunan
+untuk nemanbahkan tuple kita hanya perlu membuat tanda kurung setelah 
+penambahan nama variable */
+#[test]
+fn tuples(){
+    let himpunan : (i32, f64, char) = (321, 64.7, 's');
+    
+    // dan untuk pemanggilan index di dalam tuple kita bisa menggunakan 
+    // nama variable.no index
+    // index pertama di dalam tuple selalu dimulai dari 0
+
+    let bilangan = himpunan.0;
+    let decimal = himpunan.1;
+    let charakter = himpunan.2;
+
+    println!("tuple pertama = {}", bilangan);
+    println!("tuple kedua = {}", decimal);
+    println!("tuple ketiga = {}", charakter);
+}
+
+/*Array tipe hapir sama kaya tuple namun cuma menerima type scalar yang sama saja
+ */
+#[test]
+fn arraystype() {
+    let arr = [1,2,3,4,5];
+    // untuk pemanggilan kita bisa menggunakan nama variable[]
+    // arr juga sama index pertama dimulai dari 0
+    // let one = arr[0];
+    // let two = arr[1];
+
+    for (i,x) in arr.iter().enumerate(){
+        println!("{i}, {x}");
+    }
 }
