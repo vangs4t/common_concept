@@ -2,8 +2,34 @@
 
 
 fn main() {
-
+    println!("Hello world");
+    println!("#################");
+    fungsi();
+    println!("#################");
+    fn_with_parameters(5);
+    println!("#################");
+    fn_with_many_parameters("Kanjut besar", 10.2, true);
 }
+
+/*Function atau fungsi atau dalam bahasa java method
+merupakan bagian dimana kita bisa membuat sebuah program dan menjalankan 
+perintah2 */
+fn fungsi(){
+    println!("ini adalah fungsi");
+}
+/*di setiap function pasti ada tanda kurung nah disana kita bisa menambahkan 
+beberapa variable atau parameter */
+fn fn_with_parameters(angka :i32){
+    println!("Ini adalah angka {angka}");
+}
+// contoh fungsi dengan beberapa parameter
+fn fn_with_many_parameters(kata: &str, decimal: f64, benar : bool){
+    println!("Fungsi dengan beberapa parameter");
+    println!("{kata},{decimal},{benar}");
+}
+// statement adalah fungsi yang tidak mengembalikan apapun
+// expresi fungsi yang mengembalikan value
+
 
 /*Scalar Type
 Scalar tipe merepresentasikan single value atau satu value
