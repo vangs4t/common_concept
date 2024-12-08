@@ -2,34 +2,65 @@
 
 
 fn main() {
-    println!("Hello world");
-    println!("#################");
-    fungsi();
-    println!("#################");
-    fn_with_parameters(5);
-    println!("#################");
-    fn_with_many_parameters("Kanjut besar", 10.2, true);
+    let _result = fungsi_return();
+    let hasil  = without_return("Jhoni");
+    println!("ini adalah return value {hasil}");
 }
 
 /*Function atau fungsi atau dalam bahasa java method
 merupakan bagian dimana kita bisa membuat sebuah program dan menjalankan 
 perintah2 */
-fn fungsi(){
-    println!("ini adalah fungsi");
-}
+// fn fungsi(){
+//     println!("ini adalah fungsi");
+// }
 /*di setiap function pasti ada tanda kurung nah disana kita bisa menambahkan 
 beberapa variable atau parameter */
-fn fn_with_parameters(angka :i32){
-    println!("Ini adalah angka {angka}");
-}
+// fn fn_with_parameters(angka :i32){
+//     println!("Ini adalah angka {angka}");
+// }
 // contoh fungsi dengan beberapa parameter
-fn fn_with_many_parameters(kata: &str, decimal: f64, benar : bool){
-    println!("Fungsi dengan beberapa parameter");
-    println!("{kata},{decimal},{benar}");
-}
+// fn fn_with_many_parameters(kata: &str, decimal: f64, benar : bool){
+//     println!("Fungsi dengan beberapa parameter");
+//     println!("{kata},{decimal},{benar}");
+// }
 // statement adalah fungsi yang tidak mengembalikan apapun
 // expresi fungsi yang mengembalikan value
+#[test]
+fn statement_function(){
+    // statement merupakan variable yang tidak mengembalikan nilai yang berbeda
+    // atau sudah di tentukan sebelumnya
+    let this_statement = 6;
+    let statement = "kanjut";
 
+    println!("ini adalah statement {this_statement}");
+    println!("ini juga sama {statement}");
+
+    //sedangkan expresi merupakan perubahan nilai yang berbeda
+    // dari yang sudah ditentukan sebelumnya
+    // let this_expression = this_statement + 1;
+    /*nilai yang di dalam blok merupakan expresi karna terjadi perubahan
+    nilai value atau pengembalian nilai value yang sudah berubah */
+    let expresi = {
+        let result = 5;
+        result + 1
+    };
+    println!("ini adalah expresi {}", expresi);
+
+}
+/*return function di dalam rust tidak seperti bahasa pemograman lain nya
+yang secara gamblang di wajibkan menulis return 
+di dalam rust kita hanya menambahkan tanda panah -> setelah itu baru menulis
+kan mau mereturn apa
+dan untuk melakukan return itu kita gausah pake semicollon atau fungsi tidak akan mengembalikan apapun */
+fn fungsi_return() -> i32{
+    let hasil = 4;
+    println!("this is hasil {hasil}");
+    return hasil;
+}
+// contoh fungsi dengan parameter dan tanpa return statement
+fn without_return (_nama: &str) -> &str{
+    "Jhoni"
+}
 
 /*Scalar Type
 Scalar tipe merepresentasikan single value atau satu value
