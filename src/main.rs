@@ -1,10 +1,7 @@
 
 
-
 fn main() {
-    let _result = fungsi_return();
-    let hasil  = without_return("Jhoni");
-    println!("ini adalah return value {hasil}");
+    looping_variable();
 }
 
 /*Function atau fungsi atau dalam bahasa java method
@@ -58,9 +55,9 @@ fn fungsi_return() -> i32{
     return hasil;
 }
 // contoh fungsi dengan parameter dan tanpa return statement
-fn without_return (_nama: &str) -> &str{
-    "Jhoni"
-}
+// fn without_return (_nama: &str) -> &str{
+//     "Jhoni"
+// }
 
 /*Scalar Type
 Scalar tipe merepresentasikan single value atau satu value
@@ -185,4 +182,50 @@ fn arraystype() {
     for (i,x) in arr.iter().enumerate(){
         println!("{i}, {x}");
     }
+}
+
+/*Control flow atau mencari kondisi tertentu atau 
+kondisi if else merupakan hal paling dasar dari pemograman 
+namun mempunyai peran yang sangat penting */
+#[test]
+fn control_flow(){
+    let result = 5;
+    if result >= 5 { // membuat kondisi yang bernilai true atau false
+        println!("Bagus");
+    } else { // kondisi sebaliknya
+        println!("Kurang");
+    }
+}
+/* Di rust kita bisa membuat kondisi untuk variable anjay */
+// #[test]
+fn variable_flow(condition :bool){
+    let result = if condition {5} else {8};
+    println!("result {result}");
+}
+/*Loop di rust hanya perlu menggunakan kata kunci loop
+ */
+fn looping (){
+    let mut stop = 0;
+    loop { // ini merupakan perulangan tanpa batas karena tida menambahkan ahir program
+        println!("Again");
+        stop+=1;
+        if stop == 10 {
+            break;
+        }
+    }
+}
+// kita juga bisa menggunakan loop untuk mengisi variable
+fn looping_variable(){
+    let mut counter = 0; // buat variable penghitung
+    let result = loop { // membuat pengulangan
+        counter += 1; // penambahan index variable
+        if counter == 10 { // buat kondisi pemberhentian
+            break counter *2; // membuat index result
+        }
+    };
+    println!("The result is {result}");
+}
+/*Kita juga bisa membuat perulangan di dalam perulangan */
+fn nested_looping(){
+    
 }
